@@ -55,3 +55,5 @@ Like using the same door design for every room.
 5. Testable
 Each class does one thing, so it's easier to write unit tests.
 You can test each appliance separately, like the fridge or fan.
+
+### Single Responsibility Principle
