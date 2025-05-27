@@ -57,3 +57,36 @@ Each class does one thing, so it's easier to write unit tests.
 You can test each appliance separately, like the fridge or fan.
 
 ### Single Responsibility Principle
+
+Every class (or module) should have only one reason to change.
+That means it should only do one specific job.
+
+```
+<!-- Bad Code -->
+
+class RestaurantWorker:
+    def take_order(self): pass
+    def cook_food(self): pass
+    def clean_table(self): pass
+    def handle_payment(self): pass
+
+```
+
+```
+<!-- Good code -->
+
+class Waiter:
+    def take_order(self): pass
+
+class Chef:
+    def cook_food(self): pass
+
+class Cleaner:
+    def clean_table(self): pass
+
+class Cashier:
+    def handle_payment(self): pass
+```
+
+- SRP in Real Life: One person = one job
+- SRP in Code: One class = one responsibility
