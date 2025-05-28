@@ -90,3 +90,143 @@ class Cashier:
 
 - SRP in Real Life: One person = one job
 - SRP in Code: One class = one responsibility
+
+### 2. Open/Closed Principle
+
+A class, module, or function should be open for extension but closed for modification.
+
+Why is OCP Important?
+- Reduces the risk of breaking working code.
+- Encourages code reuse.
+- Makes it easier to adapt software to future requirements.
+- Ideal for maintaining large-scale, long-lived systems.
+
+```
+<!-- Bad Code : That Violates OCP -->
+class PaymentProcessor:
+    def process(self, payment_type, amount):
+        if payment_type == "credit_card":
+            print(f"Processing credit card payment of ${amount}")
+        elif payment_type == "paypal":
+            print(f"Processing PayPal payment of ${amount}")
+```
+Note : Every time a new payment method is introduced (e.g., UPI, crypto), you must modify this class.
+
+```
+<!-- Good code : Compliant Version Using Polymorphism -->
+from abc import ABC, abstractmethod
+
+class PaymentMethod(ABC):
+    @abstractmethod
+    def process(self, amount):
+        pass
+
+class CreditCardPayment(PaymentMethod):
+    def process(self, amount):
+        print(f"Processing credit card payment of ${amount}")
+
+class PayPalPayment(PaymentMethod):
+    def process(self, amount):
+        print(f"Processing PayPal payment of ${amount}")
+
+# Now the processor works with any payment method
+class PaymentProcessor:
+    def __init__(self, method: PaymentMethod):
+        self.method = method
+
+    def pay(self, amount):
+        self.method.process(amount)
+```
+
+Another example of Notification system
+
+```
+<!-- Bad code : Every new channel (like Slack or WhatsApp) forces a change to Notifier.-->
+class Notifier:
+    def notify(self, message, channel):
+        if channel == "email":
+            print(f"Email: {message}")
+        elif channel == "sms":
+            print(f"SMS: {message}")
+        elif channel == "push":
+            print(f"Push: {message}")
+```
+
+```
+class NotificationChannel(ABC):
+    @abstractmethod
+    def send(self, message):
+        pass
+
+class EmailNotifier(NotificationChannel):
+    def send(self, message):
+        print(f"Email: {message}")
+
+class SMSNotifier(NotificationChannel):
+    def send(self, message):
+        print(f"SMS: {message}")
+
+class PushNotifier(NotificationChannel):
+    def send(self, message):
+        print(f"Push: {message}")
+
+class Notifier:
+    def __init__(self, channel: NotificationChannel):
+        self.channel = channel
+
+    def notify(self, message):
+        self.channel.send(message)
+
+class WhatsAppNotifier(NotificationChannel):
+    def send(self, message):
+        print(f"WhatsApp: {message}")
+
+```
+
+Open : You can add new code (via subclassing or new modules)
+
+Closed : You don’t need to change existing code to add new behavior
+
+### 3. Liskov Substitution Principle
+
+Subtypes must be substitutable for their base types without altering the correctness of the program.
+
+If class S is a subclass of class T, then objects of class T should be replaceable with objects of class S without breaking the program. If you replace a parent class object with a child class object, the program should still work correctly.
+
+```
+# parant class
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def set_width(self, width):
+        self.width = width
+
+    def set_height(self, height):
+        self.height = height
+
+    def get_area(self):
+        return self.width * self.height
+
+# sub class
+class Square(Rectangle):
+    def set_width(self, width):
+        self.width = width
+        self.height = width  # Forces height to be same
+
+    def set_height(self, height):
+        self.height = height
+        self.width = height  # Forces width to be same
+
+def print_area(rect):
+    rect.set_width(5)
+    rect.set_height(10)
+    print("Expected area = 50")
+    print("Actual area =", rect.get_area())
+
+# Test
+print_area(Rectangle(2, 3))  # Works: 5 x 10 = 50
+print_area(Square(2))        # Wrong: set_height(10) sets width = 10, so area = 100
+
+```
