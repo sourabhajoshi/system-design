@@ -56,7 +56,7 @@ Like using the same door design for every room.
 Each class does one thing, so it's easier to write unit tests.
 You can test each appliance separately, like the fridge or fan.
 
-### Single Responsibility Principle
+### 1. Single Responsibility Principle
 
 Every class (or module) should have only one reason to change.
 That means it should only do one specific job.
