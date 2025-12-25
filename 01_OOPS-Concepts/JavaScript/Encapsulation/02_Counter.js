@@ -9,6 +9,9 @@ class Counter{
     #count
 
     constructor(count){
+        if (typeof count !== "number" || count < 0) {
+            throw new Error("Initial count must be a non-negative number");
+        }
         this.#count = count
     }
 
@@ -17,7 +20,7 @@ class Counter{
     }
 
     decrement(){
-        if(this.#count < 0) throw new Error("should not go below 0")
+        if(this.#count === 0) throw new Error("should not go below 0")
         this.#count -= 1;
     }
 
