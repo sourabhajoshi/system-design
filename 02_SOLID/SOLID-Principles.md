@@ -1217,7 +1217,7 @@ class AudioOnlyPlayer(MediaPlayer):
     def adjust_audio_volume(self, volume):
         print(f"Audio volume set to: {volume}")
 
-    # 👎 Unwanted methods
+    # Unwanted methods
     def play_video(self, video_file):
         raise NotImplementedError("Not supported.")
 
@@ -1680,7 +1680,7 @@ If something is stable and internal, **don't abstract it just for the sake of DI
 
 Java
 ```
-void configureGmailSpecificSetting(); // in EmailClient interface ❌```
+void configureGmailSpecificSetting(); // in EmailClient interface ```
 
 **Why it's a problem:**
 
