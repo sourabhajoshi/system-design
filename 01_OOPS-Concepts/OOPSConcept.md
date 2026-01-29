@@ -105,7 +105,7 @@ Enums (short for **enumerations**) are a powerful yet underappreciated feature 
 
 Used correctly, enums can make your code more **expressive**, **self-documenting**, and **resilient to errors**.
 
---
+---
 
 ### **What is an Enum?**
 
