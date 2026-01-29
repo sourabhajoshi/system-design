@@ -4,7 +4,7 @@ At the heart of OOP lie two fundamental concepts: **classes** and **objects**
 
 They are the foundation on which every OOP-based language like Java, Python, C++, C#, or TypeScript is built.
 
-###**What is a Class?**
+### **What is a Class?**
 
 A **class** is a _blueprint_, _template_, or _recipe_ for creating objects. It defines **what an object will contain** (its data) and **what it will be able to do** (its behavior).
 
@@ -53,7 +53,7 @@ This Car class defines what every car object should look like and what it can 
 
 ---
 
-###**What is an Object?**
+### **What is an Object?**
 
 An **object** is an instance of a class. It’s a _real-world manifestation_ of the class blueprint, something you can interact with, store data in, and invoke methods on.
 
@@ -107,7 +107,7 @@ Used correctly, enums can make your code more **expressive**, **self-documenti
 
 --
 
-###**What is an Enum?**
+### **What is an Enum?**
 
 An **enum** is a special data type that defines a collection of constant values under a single name. Unlike primitive constants or string literals, enums are **type-safe,** which means you can’t assign just any value to a variable declared as an enum type.
 
@@ -206,7 +206,7 @@ This separation of _definition_ and _implementation_ allows different parts 
 
 ---
 
-###**What is an Interface?**
+### **What is an Interface?**
 
 At its core, an interface is a contract: a list of methods that any implementing class _must_ provide. It specifies a set of behaviors that a class agrees to implement but leaves the _details_ of those behaviors up to each implementation.
 
@@ -331,7 +331,7 @@ Now that you understand how interfaces define contracts and enable flexibility
 
 ---
 
-###**What is Encapsulation?**
+### **What is Encapsulation?**
 
 Encapsulation is one of the four foundational principles of object-oriented design. It is the practice of **grouping data (variables) and behavior (methods)** that operate on that data into a single unit (typically a class) and **restricting direct access to the internal details** of that class.
 
@@ -480,7 +480,7 @@ In the next chapter, we’ll explore how **abstraction** helps you design syst
 
 ---
 
-###**What is Abstraction?**
+### **What is Abstraction?**
 
 **Abstraction** is the process of hiding complex internal implementation details and exposing only the relevant, high-level functionality to the outside world. It allows developers to **focus on what an object does**, rather than **how it does it**.
 
@@ -700,7 +700,7 @@ In the next chapter, we’ll explore how inheritance enables **code reuse**, *
 
 ---
 
-###**What is Inheritance?**
+### **What is Inheritance?**
 
 Inheritance allows one class (called the subclass or child class) to inherit the properties and behaviors of another class (called the superclass or parent class).
 
@@ -866,7 +866,7 @@ In the next chapter, we’ll explore how polymorphism enables a single interface
 
 ---
 
-###**What is Polymorphism?**
+### **What is Polymorphism?**
 
 Polymorphism allows the same method name or interface to exhibit different behaviors depending on the object that is invoking it.
 
