@@ -513,7 +513,7 @@ Although often discussed together, abstraction and encapsulation are distinct co
 
 Think of it this way: **Abstraction is the external view of an object, while Encapsulation is the internal view.**
 
-| 3       Aspect | 4       Encapsulation | 5       Abstraction |
+|        Aspect |        Encapsulation |        Abstraction |
 | --- | --- | --- |
 | Focus | Protecting data within a class | Hiding implementation complexity |
 | Goal | Restrict access to internal state | Simplify usage and expose only essentials |
