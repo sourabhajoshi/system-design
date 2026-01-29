@@ -51,6 +51,8 @@ class Car:
 
 This Car class defines what every car object should look like and what it can do.
 
+---
+
 **What is an Object?**
 
 An **object** is an instance of a class. It’s a _real-world manifestation_ of the class blueprint, something you can interact with, store data in, and invoke methods on.
@@ -102,6 +104,8 @@ That's where Enums come in. Lets explore them next.
 Enums (short for **enumerations**) are a powerful yet underappreciated feature in object-oriented design. They allow you to define a **fixed set of named constants** that improve clarity, type safety, and maintainability in your system.
 
 Used correctly, enums can make your code more **expressive**, **self-documenting**, and **resilient to errors**.
+
+--
 
 **What is an Enum?**
 
@@ -199,6 +203,8 @@ In object-oriented design, interfaces play a foundational role in building sys
 They define what a component should do, not how it should do it.
 
 This separation of _definition_ and _implementation_ allows different parts of your system to work together through well-defined contracts, without needing to know each other’s internal details.
+
+---
 
 **What is an Interface?**
 
@@ -322,6 +328,8 @@ Here’s the beauty of it:
 *   You can replace, extend, or test different gateways without touching its code.
 
 Now that you understand how interfaces define contracts and enable flexibility between different components, it’s time to explore the core principles that make object-oriented programming truly powerful, starting with Encapsulation.
+
+---
 
 **What is Encapsulation?**
 
@@ -469,6 +477,8 @@ Encapsulation focuses on **how to protect and control access** to data within 
 That’s where **Abstraction** comes in.
 
 In the next chapter, we’ll explore how **abstraction** helps you design systems that expose only the essential details while concealing unnecessary complexity, making your code cleaner, more intuitive, and easier to work with.
+
+---
 
 **What is Abstraction?**
 
@@ -688,6 +698,8 @@ That’s where **Inheritance** comes in.
 
 In the next chapter, we’ll explore how inheritance enables **code reuse**, **shared behavior**, and **hierarchical design**, allowing classes to build upon and extend one another.
 
+---
+
 **What is Inheritance?**
 
 Inheritance allows one class (called the subclass or child class) to inherit the properties and behaviors of another class (called the superclass or parent class).
@@ -851,6 +863,8 @@ Inheritance lets child classes share and extend behavior but what if multipl
 **That’s where Polymorphism comes in.**
 
 In the next chapter, we’ll explore how polymorphism enables a single interface to represent multiple implementations allowing your code to be flexible, elegant, and truly object-oriented.
+
+---
 
 **What is Polymorphism?**
 
