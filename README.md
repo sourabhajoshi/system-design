@@ -32,3 +32,17 @@ Grokking Algorithms : Bhargava, Aditya Y., Zingaro, Daniel: Amazon.in: Books (Yo
 
 Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.
  
+
+System Design: Process of defining architecture. 
+Inside architecture > components > Modules > Interfaces > data flow
+
+why system design: 
+users 10 to 100M to 100B....
+Scalability: system should handle 10 to 100m users
+Performance should not break
+Reliability: Traffic 
+Maintainability
+Cost efficient
+
+
+
